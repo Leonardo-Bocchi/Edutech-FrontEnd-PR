@@ -1,0 +1,150 @@
+/*Base*/
+	body{
+		font-family: 'Montserrat', sans-serif;
+		cursor: default;
+		transition: 1s all;
+	}
+
+	header {
+		background: #BBBBBB;
+		padding: 20px 0;
+
+	}
+
+	.caixa {
+		position: relative;
+		width: 940px;
+		margin: 0 auto;
+	}
+
+	nav {
+		position: absolute;
+		top: 110px;
+		right: 0;
+	}
+
+	nav li {
+		display: inline;
+		margin: 0 0 0 15px;
+		cursor: default;
+	}
+
+	nav a {
+		text-transform: uppercase;
+		color: #000000;
+		font-weight: bold;
+		font-size: 22px;
+		text-decoration: none;
+		cursor: default;
+	}
+
+	nav a:hover{
+		color: #C78C19;
+		text-decoration: underline;
+		transition: 0.7s color;
+	}
+
+	footer{
+		text-align: center;
+		background: url("bg.jpg");
+		padding: 40px 0;
+	}
+
+	main {
+		width: 960px;
+		margin: 0 auto;
+	}
+
+/*Page*/
+	form {
+		margin:40px 0;
+	}
+
+	form label, form legend {
+		display: block;
+		font-size: 20px;
+		margin: 0 0 10px;
+	}
+
+	.inputP {
+		display: block;
+		margin: 0 0 20px;
+		padding: 10px 25px;
+		width: 50%;
+	}
+
+	.inputP:hover {
+		color:  #C78C19;
+		border-radius: 10px;
+		border: 2px dotted #C78C19;
+		transition: 0.7s all;
+	}
+
+
+	.checkbox {
+		margin:1em 0;
+	}
+
+	fieldset label:hover{
+		border-radius: 10px;
+		border: 1px dotted #C78C19;
+		transition: 0.7s all;
+	}
+
+	fieldset label{
+		margin: 0 0 2em;
+	}
+
+	.enviar {
+		width: 40%;
+		padding: 15px 0;
+		background: #C78C19;
+		color: white;
+		font-weight: bold;
+		font-size: 18px;
+		border: none;
+		border-radius: 5px;
+		transition: 0.7s all;
+	}
+
+	.enviar:hover{
+		background: #a37315;
+		color: white;
+		cursor: pointer;
+		transform: scale(1.01);
+	}
+
+	table{
+		margin: 20px 0 40px;
+	}
+
+	table:hover{
+		margin: 21px 0 42px;
+		transform: scale(1.01);
+		transition: 0.5s all;
+	}
+
+	thead{
+		background: #555555;
+		color: white;
+		font-weight: bold;
+	}
+
+	td, th{
+		border: 1px solid black;
+		padding: 8px 15px;
+	}
+
+	@media screen and (max-width: 480px) {
+	.caixa, .inputP, .enviar, .mainPrincipal{
+		width: auto;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	nav {
+		position: static;
+	}
+}
