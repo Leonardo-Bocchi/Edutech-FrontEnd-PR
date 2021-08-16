@@ -1,0 +1,42 @@
+<canvas width="600"  height="400"></canvas>
+
+<script>
+	var tela = document.querySelector('canvas');
+	var pincel = tela.getContext('2d');
+	var indiceCorAtual = 0;
+	var cores = ['blue','red','green'];
+
+	pincel.fillStyle = 'grey';
+	pincel.fillRect(0, 0, 600, 400);
+
+	function alrt(ver) {
+
+		if(ver.shiftKey == false){
+		var x = ver.pageX - tela.offsetLeft;
+		var y = ver.pageY - tela.offsetTop;
+		pincel.fillStyle=cores[indiceCorAtual];
+		pincel.beginPath();
+		pincel.arc(x, y, 2, 0, 2*Math.PI)
+		pincel.fill()} else {
+			var x = ver.pageX - tela.offsetLeft;
+			var y = ver.pageY - tela.offsetTop;
+			pincel.fillStyle=cores[indiceCorAtual];
+			pincel.beginPath();
+			pincel.arc(x, y, 2+10, 0, 2*Math.PI)
+			pincel.fill();
+			}
+		
+	}
+	
+	function mdC() {
+		indiceCorAtual++;
+
+		if(indiceCorAtual>=cores.length){
+			indiceCorAtual = 0;
+		}
+	}
+
+	tela.oncontextmenu = mdC;
+	tela.onclick = alrt;
+
+</script>

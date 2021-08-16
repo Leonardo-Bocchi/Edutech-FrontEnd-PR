@@ -1,0 +1,29 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+	function qudrd(x, y, px, cor) {
+		var tela = document.querySelector('canvas');
+		var pincel = tela.getContext("2d");
+
+		pincel.fillStyle = cor;
+		pincel.fillRect(x, y, px, px);
+		pincel.strokeStyle = 'black';
+		pincel.strokeRect(x, y, px, px);
+	}
+
+	/*
+	qudrd(0, 0, 50, 'purple');
+	qudrd(0, 50, 50, 'blue');
+	qudrd(0, 100, 50, 'green');
+	*/
+
+	for(var x = 0; x < 600; x = x + 50) {
+		qudrd(x, 0, 50, 'purple');
+		qudrd(x, 50, 50, 'blue')
+		qudrd(x, 100, 50, 'green')
+		qudrd(x, 150, 50, 'yellow')
+		qudrd(x, 200, 50, 'orange')
+		qudrd(x, 250, 50, 'red')
+	}
+
+</script>
